@@ -7,20 +7,20 @@ console.log(Math.abs(input))
 
 //STEP 2
 let input2 = prompt("Enter a decimal number")
-while (typeof input2 !== "number" && isNaN(parseFloat(input2)) && !input2.includes(".")){
-    input2 = prompt("Enter a decimal number")
+while (isNaN(parseFloat(input2)) || input2.indexOf(".") < 0){
+    input2 = prompt("Please make sure to enter a decimal number")
 }
 console.log(Math.ceil(input2))
 
 //STEP 3
 let input3 = prompt("Enter a decimal number")
-while (typeof input3 !== "number" && isNaN(parseFloat(input2)) && !input3.includes(".")){
+while (typeof input3 !== "number" && isNaN(parseFloat(input2)) && !input3.indexOf(".") < -1){
     input2 = prompt("Enter a decimal number")
 }
 console.log(Math.floor(input3))
 
 //STEP 4
-let numCheck = (input) => {
+const numCheck = (input) => {
     let numArr = input.split(",")
     for (let i = 0; i < numArr.length; i++){
         if (isNaN(numArr[i])){

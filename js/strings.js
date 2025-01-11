@@ -1,11 +1,11 @@
 //STEP 1
 let name = prompt("Enter your name")
-alert(name.length)
+alert("Name length: " + name.length)
 
 //STEP 2
 name = prompt("Enter your name")
 num = prompt("Enter a number between 0 and " + name.length)
-alert(name.charAt(num))
+alert("Char position: " + name.charAt(num))
 
 //STEP 3
 let firstName = prompt("Enter your first name")
@@ -14,11 +14,11 @@ alert("Your name is: " + firstName.concat(" ", lastName))
 
 //STEP 4
 let storedText = "The quick brown fox jumps over the lazy dog"
-alert(storedText.indexOf("fox"))
+alert("Index of the word fox: " + storedText.indexOf("fox"))
 
 //STEP 5
 let storedText2 = "The quick brown fox jumps over the lazy fox"
-alert(storedText2.lastIndexOf("fox"))
+alert("Index of the last instance of fox: " + storedText2.lastIndexOf("fox"))
 
 //STEP 6
 let storedText3 = "The quick brown fox jumps over the lazy dog"
@@ -28,7 +28,11 @@ alert(storedText3.replace("the lazy dog", fullName))
 //STEP 7
 let storedText4 = "The quick brown fox jumps over the lazy dog"
 let word = prompt("Enter a word")
-alert(storedText4.search(word))
+let wordPosition = storedText4.search(word)
+if(wordPosition > 0)
+    alert("The word " + word + " was found at " + storedText4.search(word))
+else 
+    alert("The word " + word + " was not found")
 
 //STEP 8
 let old_string = "The quick brown fox jumps over the lazy dog"
